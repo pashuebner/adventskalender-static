@@ -504,6 +504,14 @@ a {
     cursor: pointer;
 }
 
+.topfix {
+    width: 60px;
+    position: fixed;
+    z-index: 999999999;
+    bottom: 0;
+    right: 0;
+}
+
 @media (max-width:999px) {
     .burger-wrap {
         display: flex;
