@@ -179,6 +179,7 @@ nav a img {
     border-radius: 2rem;
     z-index: 0;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .header-area {
@@ -191,6 +192,48 @@ nav a img {
     align-items: center;
     opacity: 1;
     transition: all .25s ease;
+}
+
+#front {
+    position: relative;
+    z-index: 1;
+}
+
+.kalender-grid {
+    width: calc(100% - calc(clamp(.5rem, 3svw, 2rem)*2));
+    height: calc(100% - calc(clamp(.5rem, 3svw, 2rem)*2));
+    position: absolute;
+    display: grid;
+    grid-gap: clamp(.5rem, 3svw, 2rem);
+    top: clamp(.5rem, 3svw, 2rem);
+    left: clamp(.5rem, 3svw, 2rem);
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    max-height: 100% !important;
+    animation: introContent 0.75s 2s forwards ease-in-out;
+}
+
+.kalender-grid>div {
+    z-index: 0;
+    border-radius: 1rem;
+    height: 100%;
+    width: 100%;
+    border: dashed 1px rgba(255, 255, 255, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: rgba(0, 0, 0, 0);
+    transition: all .25s ease;
+    cursor: pointer;
+}
+
+.kalender-grid>div:hover {
+    background-color: rgba(0, 0, 0, .4);
 }
 
 .intro-content {
