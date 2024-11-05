@@ -28,6 +28,7 @@ $(document).ready(function() {
         //prevent the page from jumping down to our section.
         event.preventDefault();
     });
+    calender();
 });
 
 var position = $(window).scrollTop(); 
@@ -37,7 +38,9 @@ var position = $(window).scrollTop();
 var wHeight = $(window).height();
 $('.index').scroll(function(event){
    var st = $(this).scrollTop();
-   if (st > wHeight*0.2){
+   console.log((st/wHeight));
+   $('.overlay').attr('style', 'opacity: '+ (st/wHeight)*1.5 +'!important;');
+   if (st > wHeight*0.4){
        // downscroll code
        $('body').addClass('scrolled');
    } else {
@@ -52,3 +55,20 @@ $('.content').scroll(function(event){
 $('.burger-wrap').click(function(){
     $('body').toggleClass('nav-open');
 })
+
+function calender(){
+    $('.close').click(function(){
+        $('.modal').each(function(){
+            $('.modal.active').removeClass('active');
+        })
+    })
+    $('.kalender-grid > div').each(function(){
+        $(this).click(function(){
+            $('.modal').each(function(){
+            $('.modal.active').removeClass('active');
+        })
+            let cnum = $(this).text();
+            $('#km'+cnum).addClass('active');    
+        })
+    })
+}

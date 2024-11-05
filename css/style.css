@@ -62,7 +62,7 @@ body {
     width: calc(100svw - clamp(20px, 5svw, 40px));
     height: calc(100svh - clamp(20px, 5svw, 40px));
     border-radius: 2rem;
-    background-image: url('../assets/background-advent.webp');
+    background-image: url('../assets/bg-advent.jpg');
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -146,7 +146,7 @@ nav a img {
 }
 
 .overlay {
-    background-color: #14323B;
+    background-color: #0a191d;
     opacity: 1;
     position: fixed;
     top: calc(clamp(20px, 5svw, 40px) / 2);
@@ -154,7 +154,6 @@ nav a img {
     height: calc(100svh - clamp(20px, 5svw, 40px));
     border-radius: 2rem;
     z-index: 0;
-
 }
 
 .main .overlay {
@@ -167,7 +166,7 @@ nav a img {
     }
 
     100% {
-        opacity: .7;
+        opacity: 0;
     }
 }
 
@@ -218,6 +217,7 @@ nav a img {
 
 .kalender-grid>div {
     z-index: 0;
+    color: #ffffff;
     border-radius: 1rem;
     height: 100%;
     width: 100%;
@@ -225,15 +225,169 @@ nav a img {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
+    font-size: 40px;
     font-weight: 600;
     background-color: rgba(0, 0, 0, 0);
     transition: all .25s ease;
     cursor: pointer;
+    transform: scaleX(1);
+    background: #0a191da6;
 }
 
 .kalender-grid>div:hover {
-    background-color: rgba(0, 0, 0, .4);
+    background-color: #0a191d4D;
+    font-size: 60px;
+    transform: scaleX(1) skewx(2deg) skewY(-2deg);
+}
+
+.modal {
+    border: dashed 1px rgba(255, 255, 255, .4);
+    opacity: 0;
+    z-index: 99;
+    margin: 0;
+    position: fixed;
+    top: 200%;
+    left: 50%;
+    transform: translatex(-50%) translateY(-50%) scaleX(.5);
+    width: calc(100% - 8rem);
+    height: calc(100% - 9rem - 60px);
+    max-width: 700px;
+    max-height: 800px;
+    border-radius: 2rem;
+    background: #0a191d;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 60px 1rem 3rem 1rem;
+    box-shadow: 0 0 1000px 1000px rgba(0, 0, 0, .95);
+    transition: top 0s linear, transform .5s ease, opacity .25s ease;
+}
+
+.modal.active {
+    opacity: 1;
+    top: 50%;
+    transform: translatex(-50%) translateY(-50%) scaleX(1);
+}
+
+.modal h2 {
+    font-size: clamp(20px, 5svw, 45px);
+    font-weight: 900;
+    width: 90% !important;
+    max-width: 700px !important;
+    margin-bottom: 2rem;
+}
+
+.winnernumbers {
+
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    max-width: 500px;
+    flex-wrap: wrap;
+}
+
+.winnernumbers p {
+    background: white;
+    color: #14323B;
+    padding: .75rem 2rem;
+    border-radius: 1rem;
+    margin: .5rem;
+    font-size: 16px;
+}
+
+.close {
+    background: #C5A326;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    width: 200px;
+    height: 50px;
+    border-radius: 2rem;
+    font-size: 24px;
+    font-weight: 900;
+    margin-top: -50px;
+    left: calc(50%);
+    transform: translateX(-50%);
+    position: fixed;
+    cursor: pointer;
+    transition: all .25s ease;
+}
+
+.close:hover {
+    transform-origin: center center;
+    transform: translate(-50%) skewY(-4deg);
+}
+
+.modal cards {
+    display: grid;
+    margin-left: 0 !important;
+    grid-template-columns: 50% 50% !important;
+    grid-gap: .5rem;
+    width: calc(100% - .5rem) !important;
+}
+
+@media (max-width:599px) {
+    .modal cards {
+        display: grid;
+        grid-template-columns: 100% !important;
+        grid-gap: .5rem;
+
+    }
+
+    .modal {
+        border: none;
+        width: calc(100% - 3rem);
+        height: calc(100% - 5rem - 40px);
+        border-radius: 2rem;
+        padding: 40px 1rem 4rem 1rem;
+    }
+
+    .close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+        height: 40px;
+        border-radius: 2rem;
+        font-size: 20px;
+        font-weight: 900;
+        margin-top: -25px;
+        position: fixed;
+    }
+}
+
+.modal cards card {
+    background-color: white !important;
+    color: #14323B;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    min-height: 200px;
+}
+
+.modal cards card p {
+    margin: 0;
+    padding: 0;
+}
+
+.modal cards card h3 {
+    margin-bottom: .5rem;
+}
+
+.modal card img {
+    width: 100%;
+    height: 70px;
+    padding: 1rem;
+    background-color: white;
+    max-width: 100%;
+    margin-bottom: -1rem;
+    border-radius: .5rem;
+    object-fit: contain;
 }
 
 .intro-content {
@@ -270,12 +424,14 @@ nav a img {
         opacity: 0;
         max-width: 1000px;
         width: 90%;
+        filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, .8));
     }
 
     100% {
         opacity: 1;
         max-width: 300px;
         width: 50%;
+        filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, .4)) drop-shadow(0px 0px 40px rgba(0, 0, 0, .6)) drop-shadow(0px 0px 80px rgba(0, 0, 0, .8)) drop-shadow(0px 0px 120px rgba(0, 0, 0, .8)) drop-shadow(0px 0px 200px rgba(0, 0, 0, 1));
     }
 }
 
@@ -407,7 +563,6 @@ body.scrolled .overlay {
     top: calc((clamp(20px, 5svw, 40px) / 2) + 60px);
     width: calc(100svw - clamp(20px, 5svw, 40px));
     height: calc(100svh - clamp(20px, 5svw, 40px) - 60px);
-    opacity: 1 !important;
 }
 
 
@@ -532,7 +687,7 @@ footer {
 }
 
 .main section:nth-child(odd) {
-    background-color: rgba(255, 255, 255, .05);
+    background-color: rgba(0, 0, 0, .1);
     padding: 2rem 0;
     margin-bottom: 2rem;
     margin-top: 2rem;
