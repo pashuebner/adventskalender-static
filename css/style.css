@@ -710,7 +710,7 @@ a {
     right: 0;
 }
 
-@media (max-width:999px) {
+@media (max-width:998px) {
     .burger-wrap {
         display: flex;
         cursor: pointer;
