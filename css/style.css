@@ -323,7 +323,7 @@ nav a img {
     transform: translate(-50%) skewY(-4deg);
 }
 
-.modal cards {
+.modal .cards {
     display: grid;
     margin-left: 0 !important;
     grid-template-columns: 50% 50% !important;
@@ -361,7 +361,7 @@ nav a img {
     }
 }
 
-.modal cards card {
+.modal .cards .card {
     background-color: white !important;
     color: #14323B;
     display: flex;
@@ -370,16 +370,16 @@ nav a img {
     min-height: 200px;
 }
 
-.modal cards card p {
+.modal .cards .card p {
     margin: 0;
     padding: 0;
 }
 
-.modal cards card h3 {
+.modal .cards .card h3 {
     margin-bottom: .5rem;
 }
 
-.modal card img {
+.modal .card img {
     width: 100%;
     height: 70px;
     padding: 1rem;
@@ -649,13 +649,13 @@ body.scrolled .content {
     max-width: 90%;
 }
 
-cards {
+.cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: .5rem;
 }
 
-card {
+.card {
     background-color: darkslategrey;
     border-radius: .5rem;
     padding: 0 1rem 1rem 1rem;
@@ -666,11 +666,11 @@ card {
     align-items: center;
 }
 
-card ul {
+.card ul {
     padding-left: 0;
 }
 
-card li {
+.card li {
     list-style: none;
     text-align: center !important;
     margin-left: auto;
@@ -723,7 +723,7 @@ a {
         object-fit: cover;
     }
 
-    cards {
+    .cards {
         display: grid;
         grid-template-columns: 1fr;
         grid-gap: .5rem;
