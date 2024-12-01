@@ -1,9 +1,4 @@
-/*const now = new Date();
-const day = ("0" + now.getDate()).slice(-2);
-const month = now.getMonth();
 
-const middlePos = 32;
-const totalheight = 32 * (day - 2);*/
 let i = 1;
 
 var startScroll;
@@ -35,19 +30,24 @@ $(document).ready(function () {
 var position = $(window).scrollTop();
 
 // should start at 0
-
+var wWidth = $(window).width();
 var wHeight = $(window).height();
+
 $(".index").scroll(function (event) {
   var st = $(this).scrollTop();
-  $(".overlay").attr(
-    "style",
-    "opacity: " + (st / wHeight) * 1.5 + "!important;"
-  );
-  if (st > wHeight * 0.4) {
+  if (st > wHeight * 0.25) {
     // downscroll code
+    $(".overlay").attr(
+      "style",
+      "opacity: " + 1 + "!important;"
+    );
     $("body").addClass("scrolled");
   } else {
     // topscroll code
+    $(".overlay").attr(
+      "style",
+      "opacity: " + 0 + "!important;"
+    );
     $("body").removeClass("scrolled");
   }
 });
@@ -71,7 +71,10 @@ function calender() {
         $(".modal.active").removeClass("active");
       });
       let cnum = $(this).text();
-      $("#km" + cnum).addClass("active");
+      if($("#km" + cnum)[0]){
+        $("#km" + cnum).addClass("active");
+      }
+      
     });
   });
 }
