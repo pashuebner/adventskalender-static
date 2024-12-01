@@ -74,12 +74,15 @@ body {
 
 nav {
     margin: auto;
-    top: calc(clamp(20px, 5svw, 40px) / 2);
-    left: calc(clamp(20px, 5svw, 40px) / 2);
-    width: calc(100svw - clamp(20px, 5svw, 40px));
+    top: 0;
+    left: 0;
+    width: calc(100svw - 2rem);
     height: 60px;
+    padding:1rem;
+    background-color:#C5A326;
     opacity: 0;
     display: grid;
+    z-index: 99;
     grid-template-columns: 100px 1fr 100px;
     position: fixed;
     max-height: 0px;
@@ -155,7 +158,9 @@ nav a img {
     border-radius: 2rem;
     z-index: 0;
 }
-
+section{
+    padding-top:3rem!important;
+}
 .main .overlay {
     animation: introBg .5s 1.5s forwards ease-in-out;
 }
@@ -392,19 +397,17 @@ nav a img {
 
 .intro-content {
     opacity: 0;
-    max-height: 0;
+    max-height: 1000px;
     overflow: hidden;
     animation: introContent 0.75s 2s forwards ease-in-out;
 }
 
 @keyframes introContent {
     0% {
-        max-height: 0;
         opacity: 0;
     }
 
     100% {
-        max-height: 1000px;
         opacity: 1;
     }
 }
@@ -422,16 +425,14 @@ nav a img {
 @keyframes introLogo {
     0% {
         opacity: 0;
-        max-width: 1000px;
-        width: 90%;
-        filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, .8));
+        max-width: 500px;
+        width: 60%;
     }
 
     100% {
         opacity: 1;
         max-width: 300px;
         width: 50%;
-        filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, .4)) drop-shadow(0px 0px 40px rgba(0, 0, 0, .6)) drop-shadow(0px 0px 80px rgba(0, 0, 0, .8)) drop-shadow(0px 0px 120px rgba(0, 0, 0, .8)) drop-shadow(0px 0px 200px rgba(0, 0, 0, 1));
     }
 }
 
@@ -509,15 +510,7 @@ p {
     transition: all .1s linear;
 }
 
-#winnernumber p:not(.active) {
-    display: none;
-    opacity: 0;
-}
-
-#winnernumber p.active {
-    opacity: 1;
-}
-
+/*
 @keyframes introduceDate {
     0% {
         opacity: 0;
@@ -527,7 +520,7 @@ p {
         opacity: 1;
     }
 }
-
+*/
 section {
     min-height: 100svh;
     opacity: 0;
@@ -549,7 +542,7 @@ body.scrolled nav {
 body.scrolled section {
     opacity: 1;
 }
-
+/*
 body.scrolled .body-wrapper {
     margin-top: calc((clamp(20px, 5svw, 40px) / 2) + 60px);
     width: calc(100svw - clamp(20px, 5svw, 40px));
@@ -567,7 +560,7 @@ body.scrolled .content {
     top: calc((clamp(20px, 5svw, 40px) / 2) + 60px);
     width: calc(100svw - clamp(20px, 5svw, 40px));
     height: calc(100svh - clamp(20px, 5svw, 40px) - 60px);
-}
+}*/
 
 /*Content*/
 .inner-sec>* {
@@ -769,8 +762,8 @@ table tbody td:nth-child(3) strong {
     }
 
     .nav-open nav {
-        height: 450px;
-        max-height: 450px !important;
+        height: 250px;
+        max-height: 250px !important;
     }
 
     nav .navspacer {
@@ -783,7 +776,7 @@ table tbody td:nth-child(3) strong {
         display: block !important;
         margin-bottom: .5rem;
     }
-
+/*
     body.scrolled.nav-open .body-wrapper {
         margin-top: calc((clamp(20px, 5svw, 40px) / 2) + 250px);
         width: calc(100svw - clamp(20px, 5svw, 40px));
@@ -801,7 +794,7 @@ table tbody td:nth-child(3) strong {
         top: calc((clamp(20px, 5svw, 40px) / 2) + 250px);
         width: calc(100svw - clamp(20px, 5svw, 40px));
         height: calc(100svh - clamp(20px, 5svw, 40px) - 250px);
-    }
+    }*/
 
     .media-text .text {
         width: 250px;
