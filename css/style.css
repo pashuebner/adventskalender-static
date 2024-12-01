@@ -79,7 +79,7 @@ nav {
     width: calc(100svw - 2rem);
     height: 60px;
     padding:1rem;
-    background-color:#C5A326;
+    background-color:#ccab34;
     opacity: 0;
     display: grid;
     z-index: 99;
