@@ -233,12 +233,14 @@ nav a img {
     transform: scaleX(1);
     background: #0a191da6;
 }
-
-.kalender-grid>div:hover {
+@media (orientation:landscape){
+    .kalender-grid>div:hover {
     background-color: #0a191d4D;
     font-size: 60px;
     transform: scaleX(1) skewx(2deg) skewY(-2deg);
 }
+}
+
 
 .modal {
     border: dashed 1px rgba(255, 255, 255, .4);
