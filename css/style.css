@@ -242,13 +242,13 @@ nav a img {
 
 .modal {
     border: dashed 1px rgba(255, 255, 255, .4);
-    opacity: 0;
+    display: none;
     z-index: 99;
     margin: 0;
     position: fixed;
-    top: 200%;
+    top: 50%;
     left: 50%;
-    transform: translatex(-50%) translateY(-50%) scaleX(.5);
+    transform: translatex(-50%) translateY(-50%);
     width: calc(100% - 8rem);
     height: calc(100% - 9rem - 60px);
     max-width: 700px;
@@ -263,9 +263,7 @@ nav a img {
 }
 
 .modal.active {
-    opacity: 1;
-    top: 50%;
-    transform: translatex(-50%) translateY(-50%) scaleX(1);
+    display:block;
 }
 
 .modal h2 {
