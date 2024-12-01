@@ -35,7 +35,7 @@ var wHeight = $(window).height();
 
 $(".index").scroll(function (event) {
   var st = $(this).scrollTop();
-  if (st > wHeight * 0.4) {
+  if (st > wHeight * 0.25) {
     // downscroll code
     $(".overlay").attr(
       "style",
