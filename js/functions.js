@@ -71,7 +71,10 @@ function calender() {
         $(".modal.active").removeClass("active");
       });
       let cnum = $(this).text();
-      $("#km" + cnum).addClass("active");
+      if($("#km" + cnum)[0]){
+        $("#km" + cnum).addClass("active");
+      }
+      
     });
   });
 }
