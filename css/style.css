@@ -78,8 +78,8 @@ nav {
     left: 0;
     width: calc(100svw - 2rem);
     height: 60px;
-    padding:1rem;
-    background-color:#ccab34;
+    padding: 1rem;
+    background-color: #ccab34;
     opacity: 0;
     display: grid;
     z-index: 99;
@@ -158,9 +158,11 @@ nav a img {
     border-radius: 2rem;
     z-index: 0;
 }
-section{
-    padding-top:3rem!important;
+
+section {
+    padding-top: 3rem !important;
 }
+
 .main .overlay {
     animation: introBg .5s 1.5s forwards ease-in-out;
 }
@@ -238,12 +240,13 @@ section{
     transform: scaleX(1);
     background: #0a191da6;
 }
-@media (orientation:landscape){
+
+@media (orientation:landscape) {
     .kalender-grid>div:hover {
-    background-color: #0a191d4D;
-    font-size: 60px;
-    transform: scaleX(1) skewx(2deg) skewY(-2deg);
-}
+        background-color: #0a191d4D;
+        font-size: 60px;
+        transform: scaleX(1) skewx(2deg) skewY(-2deg);
+    }
 }
 
 
@@ -270,7 +273,7 @@ section{
 }
 
 .modal.active {
-    display:block;
+    display: block;
 }
 
 .modal h2 {
@@ -542,6 +545,7 @@ body.scrolled nav {
 body.scrolled section {
     opacity: 1;
 }
+
 /*
 body.scrolled .body-wrapper {
     margin-top: calc((clamp(20px, 5svw, 40px) / 2) + 60px);
@@ -738,6 +742,70 @@ table tbody td:nth-child(3) strong {
     width: 33% !important;
 }
 
+.checkNumber {
+    height: 40px;
+    width: 200px;
+    border-radius: .5rem;
+    border: none;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.checkResult p {
+    font-size: 18px !important;
+    line-height: 1 !important;
+}
+
+.checkResult p i {
+    font-size: 14px;
+}
+
+input[type="submit"] {
+    background-color: #C5A326;
+    color: white;
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+    font-size: 20px;
+    font-weight: 900;
+    border: none;
+    cursor: pointer;
+}
+
+.checkResult {
+    position: fixed;
+    padding: .5rem .5rem 24px .5rem;
+    width: 300px;
+    height: inherit;
+    flex-direction: column;
+    background-color: white;
+    color: #0a191d;
+    border-radius: .5rem;
+    margin-top: .5rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkResult h2 {
+    margin: 0 !important;
+    margin-bottom: .5rem !important;
+}
+
+.checkResult span {
+    line-height: 1;
+    padding: .5rem;
+    background-color: #0a191d;
+    color: white;
+    width: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    bottom: calc(-10px - .5rem);
+    position: absolute;
+    cursor: pointer;
+    border: solid 1px wheat;
+}
+
 @media (max-width:998px) {
     .burger-wrap {
         display: flex;
@@ -776,7 +844,8 @@ table tbody td:nth-child(3) strong {
         display: block !important;
         margin-bottom: .5rem;
     }
-/*
+
+    /*
     body.scrolled.nav-open .body-wrapper {
         margin-top: calc((clamp(20px, 5svw, 40px) / 2) + 250px);
         width: calc(100svw - clamp(20px, 5svw, 40px));

@@ -29,8 +29,12 @@
     <div class="content index">
       <div id="start" class="header-area">
         <div id="front">
-          <img class="logo" src="/assets/logo-advent.png" alt="" style="min-width: 300px" />
-
+          <h1 style="margin-bottom:.25rem; font-size:25px; text-shadow:2px 2px 0px black;">Nummer überprüfen</h1>
+          <input type="number" min="0" max="2500" class="checkNumber" />
+          <input type="submit" value="Prüfen" class="checkNumberSubmit" />
+          <div class="checkResult"><span>x</span>
+            <div></div>
+          </div>
           <div class="intro-content" style="display: none!important;">
             <a href="#engagement">
               <div class="field">
@@ -2076,7 +2080,109 @@
           <h2>22. Dezember 2024</h2>
           <h2>Die heutigen Gewinne</h2>
           <div class="inner-sec">
-            <figure class="wp-block-table"><table class="has-fixed-layout"><thead><tr><th>Gewinn</th><th class="has-text-align-right" data-align="right">Wert</th><th class="has-text-align-right" data-align="right">Gewinnnummer</th></tr></thead><tbody><tr><td>Partyfass von Brauerei Falkenstein</td><td class="has-text-align-right" data-align="right">14 €</td><td class="has-text-align-right" data-align="right"><strong>1171</strong></td></tr><tr><td>Partyfass von Brauerei Falkenstein</td><td class="has-text-align-right" data-align="right">14 €</td><td class="has-text-align-right" data-align="right"><strong>0373</strong></td></tr><tr><td>Partyfass von Brauerei Falkenstein</td><td class="has-text-align-right" data-align="right">14 €</td><td class="has-text-align-right" data-align="right"><strong>1989</strong></td></tr><tr><td>Partyfass von Brauerei Falkenstein</td><td class="has-text-align-right" data-align="right">14 €</td><td class="has-text-align-right" data-align="right"><strong>1947</strong></td></tr><tr><td>Partyfass von Brauerei Falkenstein</td><td class="has-text-align-right" data-align="right">14 €</td><td class="has-text-align-right" data-align="right"><strong><strong>0706</strong></strong></td></tr><tr><td>Partyfass von Brauerei Falkenstein</td><td class="has-text-align-right" data-align="right">14 €</td><td class="has-text-align-right" data-align="right"><strong><strong>0154</strong></strong></td></tr><tr><td>Partyfass von Brauerei Falkenstein</td><td class="has-text-align-right" data-align="right">14 €</td><td class="has-text-align-right" data-align="right"><strong><strong>0241</strong></strong></td></tr><tr><td>Kochkurs von Landgasthof Hubertus</td><td class="has-text-align-right" data-align="right">140 €</td><td class="has-text-align-right" data-align="right"><strong><strong>0980</strong></strong></td></tr><tr><td>Kochkurs von Landgasthof Hubertus</td><td class="has-text-align-right" data-align="right">140 €</td><td class="has-text-align-right" data-align="right"><strong>0713</strong></td></tr><tr><td>Gutschein von Cafe Stadthaus</td><td class="has-text-align-right" data-align="right">25 €</td><td class="has-text-align-right" data-align="right"><strong>2158</strong></td></tr><tr><td>Gutschein von Cafe Stadthaus</td><td class="has-text-align-right" data-align="right">25 €</td><td class="has-text-align-right" data-align="right"><strong>0669</strong></td></tr><tr><td>Gutschein von Cafe Stadthaus</td><td class="has-text-align-right" data-align="right">25 €</td><td class="has-text-align-right" data-align="right"><strong>1282</strong></td></tr><tr><td>Gutschein von Cafe Stadthaus</td><td class="has-text-align-right" data-align="right">25 €</td><td class="has-text-align-right" data-align="right"><strong>1305</strong></td></tr><tr><td>AK-Schecks von Immo-Holding GmbH</td><td class="has-text-align-right" data-align="right">50 €</td><td class="has-text-align-right" data-align="right"><strong>0255</strong></td></tr><tr><td>AK-Schecks von Immo-Holding GmbH</td><td class="has-text-align-right" data-align="right">50 €</td><td class="has-text-align-right" data-align="right"><strong>0504</strong></td></tr><tr><td>AK-Schecks von Immo-Holding GmbH</td><td class="has-text-align-right" data-align="right">50 €</td><td class="has-text-align-right" data-align="right"><strong>2248</strong></td></tr><tr><td>AK-Schecks von Immo-Holding GmbH</td><td class="has-text-align-right" data-align="right">50 €</td><td class="has-text-align-right" data-align="right"><strong>1238</strong></td></tr><tr><td>AK-Schecks von Immo-Holding GmbH</td><td class="has-text-align-right" data-align="right">50 €</td><td class="has-text-align-right" data-align="right"><strong>0199</strong></td></tr></tbody></table></figure>
+            <figure class="wp-block-table">
+              <table class="has-fixed-layout">
+                <thead>
+                  <tr>
+                    <th>Gewinn</th>
+                    <th class="has-text-align-right" data-align="right">Wert</th>
+                    <th class="has-text-align-right" data-align="right">Gewinnnummer</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Partyfass von Brauerei Falkenstein</td>
+                    <td class="has-text-align-right" data-align="right">14 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>1171</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Partyfass von Brauerei Falkenstein</td>
+                    <td class="has-text-align-right" data-align="right">14 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>0373</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Partyfass von Brauerei Falkenstein</td>
+                    <td class="has-text-align-right" data-align="right">14 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>1989</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Partyfass von Brauerei Falkenstein</td>
+                    <td class="has-text-align-right" data-align="right">14 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>1947</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Partyfass von Brauerei Falkenstein</td>
+                    <td class="has-text-align-right" data-align="right">14 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong><strong>0706</strong></strong></td>
+                  </tr>
+                  <tr>
+                    <td>Partyfass von Brauerei Falkenstein</td>
+                    <td class="has-text-align-right" data-align="right">14 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong><strong>0154</strong></strong></td>
+                  </tr>
+                  <tr>
+                    <td>Partyfass von Brauerei Falkenstein</td>
+                    <td class="has-text-align-right" data-align="right">14 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong><strong>0241</strong></strong></td>
+                  </tr>
+                  <tr>
+                    <td>Kochkurs von Landgasthof Hubertus</td>
+                    <td class="has-text-align-right" data-align="right">140 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong><strong>0980</strong></strong></td>
+                  </tr>
+                  <tr>
+                    <td>Kochkurs von Landgasthof Hubertus</td>
+                    <td class="has-text-align-right" data-align="right">140 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>0713</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Gutschein von Cafe Stadthaus</td>
+                    <td class="has-text-align-right" data-align="right">25 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>2158</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Gutschein von Cafe Stadthaus</td>
+                    <td class="has-text-align-right" data-align="right">25 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>0669</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Gutschein von Cafe Stadthaus</td>
+                    <td class="has-text-align-right" data-align="right">25 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>1282</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Gutschein von Cafe Stadthaus</td>
+                    <td class="has-text-align-right" data-align="right">25 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>1305</strong></td>
+                  </tr>
+                  <tr>
+                    <td>AK-Schecks von Immo-Holding GmbH</td>
+                    <td class="has-text-align-right" data-align="right">50 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>0255</strong></td>
+                  </tr>
+                  <tr>
+                    <td>AK-Schecks von Immo-Holding GmbH</td>
+                    <td class="has-text-align-right" data-align="right">50 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>0504</strong></td>
+                  </tr>
+                  <tr>
+                    <td>AK-Schecks von Immo-Holding GmbH</td>
+                    <td class="has-text-align-right" data-align="right">50 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>2248</strong></td>
+                  </tr>
+                  <tr>
+                    <td>AK-Schecks von Immo-Holding GmbH</td>
+                    <td class="has-text-align-right" data-align="right">50 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>1238</strong></td>
+                  </tr>
+                  <tr>
+                    <td>AK-Schecks von Immo-Holding GmbH</td>
+                    <td class="has-text-align-right" data-align="right">50 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>0199</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </figure>
           </div>
         </div>
         <div id="km23" class="modal">
@@ -2084,7 +2190,99 @@
           <h2>23. Dezember 2024</h2>
           <h2>Die heutigen Gewinne</h2>
           <div class="inner-sec">
-<figure class="wp-block-table"><table class="has-fixed-layout"><thead><tr><th>Gewinn</th><th class="has-text-align-right" data-align="right">Wert</th><th class="has-text-align-right" data-align="right">Nummer</th></tr></thead><tbody><tr><td>Gutschein von V-Markt</td><td class="has-text-align-right" data-align="right">25 €</td><td class="has-text-align-right" data-align="right"><strong>2367</strong></td></tr><tr><td>Gutschein von V-Markt</td><td class="has-text-align-right" data-align="right">25 €</td><td class="has-text-align-right" data-align="right"><strong>1003</strong></td></tr><tr><td>Gutschein von V-Markt</td><td class="has-text-align-right" data-align="right">25 €</td><td class="has-text-align-right" data-align="right"><strong>2228</strong></td></tr><tr><td>Gutschein von V-Markt</td><td class="has-text-align-right" data-align="right">25 €</td><td class="has-text-align-right" data-align="right"><strong>1906</strong></td></tr><tr><td>Gutschein von V-Markt</td><td class="has-text-align-right" data-align="right">25 €</td><td class="has-text-align-right" data-align="right"><strong><strong>1907</strong></strong></td></tr><tr><td>Ganganalyse von Orthopädie Trautmann</td><td class="has-text-align-right" data-align="right">60 €</td><td class="has-text-align-right" data-align="right"><strong><strong>1716</strong></strong></td></tr><tr><td>Ganganalyse von Orthopädie Trautmann</td><td class="has-text-align-right" data-align="right">60 €</td><td class="has-text-align-right" data-align="right"><strong><strong>1630</strong></strong></td></tr><tr><td>Ganganalyse von Orthopädie Trautmann</td><td class="has-text-align-right" data-align="right">60 €</td><td class="has-text-align-right" data-align="right"><strong><strong>2366</strong></strong></td></tr><tr><td>Ganganalyse von Orthopädie Trautmann</td><td class="has-text-align-right" data-align="right">60 €</td><td class="has-text-align-right" data-align="right"><strong>2187</strong></td></tr><tr><td>2 Konzertkart. von Kulturring Kaufbeuren</td><td class="has-text-align-right" data-align="right">60 €</td><td class="has-text-align-right" data-align="right"><strong>2474</strong></td></tr><tr><td>2 Konzertkart. von Kulturring Kaufbeuren</td><td class="has-text-align-right" data-align="right">60 €</td><td class="has-text-align-right" data-align="right"><strong>1644</strong></td></tr><tr><td>2 Konzertkart. von Kulturring Kaufbeuren</td><td class="has-text-align-right" data-align="right">60 €</td><td class="has-text-align-right" data-align="right"><strong>1075</strong></td></tr><tr><td>Gutschein von Engels Genussreich</td><td class="has-text-align-right" data-align="right">20 €</td><td class="has-text-align-right" data-align="right"><strong>1109</strong></td></tr><tr><td>Gutschein von Engels Genussreich</td><td class="has-text-align-right" data-align="right">20 €</td><td class="has-text-align-right" data-align="right"><strong>0011</strong></td></tr><tr><td>Gutschein von Engels Genussreich</td><td class="has-text-align-right" data-align="right">20 €</td><td class="has-text-align-right" data-align="right"><strong>2115</strong></td></tr><tr><td>Gutschein von Engels Genussreich</td><td class="has-text-align-right" data-align="right">20 €</td><td class="has-text-align-right" data-align="right"><strong>1002</strong></td></tr></tbody></table></figure>
+            <figure class="wp-block-table">
+              <table class="has-fixed-layout">
+                <thead>
+                  <tr>
+                    <th>Gewinn</th>
+                    <th class="has-text-align-right" data-align="right">Wert</th>
+                    <th class="has-text-align-right" data-align="right">Nummer</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Gutschein von V-Markt</td>
+                    <td class="has-text-align-right" data-align="right">25 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>2367</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Gutschein von V-Markt</td>
+                    <td class="has-text-align-right" data-align="right">25 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>1003</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Gutschein von V-Markt</td>
+                    <td class="has-text-align-right" data-align="right">25 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>2228</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Gutschein von V-Markt</td>
+                    <td class="has-text-align-right" data-align="right">25 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>1906</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Gutschein von V-Markt</td>
+                    <td class="has-text-align-right" data-align="right">25 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong><strong>1907</strong></strong></td>
+                  </tr>
+                  <tr>
+                    <td>Ganganalyse von Orthopädie Trautmann</td>
+                    <td class="has-text-align-right" data-align="right">60 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong><strong>1716</strong></strong></td>
+                  </tr>
+                  <tr>
+                    <td>Ganganalyse von Orthopädie Trautmann</td>
+                    <td class="has-text-align-right" data-align="right">60 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong><strong>1630</strong></strong></td>
+                  </tr>
+                  <tr>
+                    <td>Ganganalyse von Orthopädie Trautmann</td>
+                    <td class="has-text-align-right" data-align="right">60 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong><strong>2366</strong></strong></td>
+                  </tr>
+                  <tr>
+                    <td>Ganganalyse von Orthopädie Trautmann</td>
+                    <td class="has-text-align-right" data-align="right">60 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>2187</strong></td>
+                  </tr>
+                  <tr>
+                    <td>2 Konzertkart. von Kulturring Kaufbeuren</td>
+                    <td class="has-text-align-right" data-align="right">60 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>2474</strong></td>
+                  </tr>
+                  <tr>
+                    <td>2 Konzertkart. von Kulturring Kaufbeuren</td>
+                    <td class="has-text-align-right" data-align="right">60 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>1644</strong></td>
+                  </tr>
+                  <tr>
+                    <td>2 Konzertkart. von Kulturring Kaufbeuren</td>
+                    <td class="has-text-align-right" data-align="right">60 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>1075</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Gutschein von Engels Genussreich</td>
+                    <td class="has-text-align-right" data-align="right">20 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>1109</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Gutschein von Engels Genussreich</td>
+                    <td class="has-text-align-right" data-align="right">20 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>0011</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Gutschein von Engels Genussreich</td>
+                    <td class="has-text-align-right" data-align="right">20 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>2115</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Gutschein von Engels Genussreich</td>
+                    <td class="has-text-align-right" data-align="right">20 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>1002</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </figure>
           </div>
         </div>
         <div id="km24" class="modal">
@@ -2092,7 +2290,139 @@
           <h2>24. Dezember 2024</h2>
           <h2>Die heutigen Gewinne</h2>
           <div class="inner-sec">
-<figure class="wp-block-table"><table class="has-fixed-layout"><thead><tr><th>Gewinn</th><th class="has-text-align-right" data-align="right">Wert</th><th class="has-text-align-right" data-align="right">Nummer</th></tr></thead><tbody><tr><td>Gutschein von Damenmoden Hein</td><td class="has-text-align-right" data-align="right">100 €</td><td class="has-text-align-right" data-align="right"><strong>0775</strong></td></tr><tr><td>Gutschein von Damenmoden Hein</td><td class="has-text-align-right" data-align="right">100 €</td><td class="has-text-align-right" data-align="right"><strong>0989</strong></td></tr><tr><td>Gutschein von Damenmoden Hein</td><td class="has-text-align-right" data-align="right">100 €</td><td class="has-text-align-right" data-align="right"><strong>1867</strong></td></tr><tr><td>Gutschein von Damenmoden Hein</td><td class="has-text-align-right" data-align="right">100 €</td><td class="has-text-align-right" data-align="right"><strong>0958</strong></td></tr><tr><td>Gutschein von Damenmoden Hein</td><td class="has-text-align-right" data-align="right">100 €</td><td class="has-text-align-right" data-align="right"><strong><strong>0550</strong></strong></td></tr><tr><td>Goldbarren von Sparkasse Allgäu</td><td class="has-text-align-right" data-align="right">350 €</td><td class="has-text-align-right" data-align="right"><strong><strong>0893</strong></strong></td></tr><tr><td>Goldbarren von Sparkasse Allgäu</td><td class="has-text-align-right" data-align="right">350 €</td><td class="has-text-align-right" data-align="right"><strong><strong>2434</strong></strong></td></tr><tr><td>Bargeld von PAUL Bau &amp; Putz GmbH</td><td class="has-text-align-right" data-align="right">250 €</td><td class="has-text-align-right" data-align="right"><strong><strong>1725</strong></strong></td></tr><tr><td>Bargeld von PAUL Bau &amp; Putz GmbH</td><td class="has-text-align-right" data-align="right">250 €</td><td class="has-text-align-right" data-align="right"><strong>2279</strong></td></tr><tr><td>Gutschein von Pianofactum Musikhaus</td><td class="has-text-align-right" data-align="right">200 €</td><td class="has-text-align-right" data-align="right"><strong>2110</strong></td></tr><tr><td>Gutschein von Pianofactum Musikhaus</td><td class="has-text-align-right" data-align="right">200 €</td><td class="has-text-align-right" data-align="right"><strong>1030</strong></td></tr><tr><td>Gutschein von Pianofactum Musikhaus</td><td class="has-text-align-right" data-align="right">200 €</td><td class="has-text-align-right" data-align="right"><strong>2171</strong></td></tr><tr><td>Geschenkkorb von Wertachtal Werkstätten</td><td class="has-text-align-right" data-align="right">50 €</td><td class="has-text-align-right" data-align="right"><strong>2435</strong></td></tr><tr><td>Geschenkkorb von Wertachtal Werkstätten</td><td class="has-text-align-right" data-align="right">50 €</td><td class="has-text-align-right" data-align="right"><strong>1045</strong></td></tr><tr><td>Geschenkkorb von Wertachtal Werkstätten</td><td class="has-text-align-right" data-align="right">50 €</td><td class="has-text-align-right" data-align="right"><strong>0361</strong></td></tr><tr><td>AK-Schecks von Klemm Wasser + Wärme</td><td class="has-text-align-right" data-align="right">100 €</td><td class="has-text-align-right" data-align="right"><strong>0659</strong></td></tr><tr><td>AK-Schecks von Klemm Wasser + Wärme</td><td class="has-text-align-right" data-align="right">100 €</td><td class="has-text-align-right" data-align="right"><strong>0407</strong></td></tr><tr><td>AK-Schecks von Klemm Wasser + Wärme</td><td class="has-text-align-right" data-align="right">100 €</td><td class="has-text-align-right" data-align="right"><strong>1592</strong></td></tr><tr><td>AK-Schecks von Klemm Wasser + Wärme</td><td class="has-text-align-right" data-align="right">100 €</td><td class="has-text-align-right" data-align="right"><strong>1447</strong></td></tr><tr><td>AK-Schecks von Klemm Wasser + Wärme</td><td class="has-text-align-right" data-align="right">100 €</td><td class="has-text-align-right" data-align="right"><strong>1784</strong></td></tr><tr><td>Fl. Champagner von De Crignis Weinhandel</td><td class="has-text-align-right" data-align="right">30 €</td><td class="has-text-align-right" data-align="right"><strong>1666</strong></td></tr><tr><td>Fl. Champagner von De Crignis Weinhandel</td><td class="has-text-align-right" data-align="right">30 €</td><td class="has-text-align-right" data-align="right"><strong>1060</strong></td></tr><tr><td>Fl. Champagner von De Crignis Weinhandel</td><td class="has-text-align-right" data-align="right">30 €</td><td class="has-text-align-right" data-align="right"><strong>1114</strong></td></tr><tr><td>Fl. Champagner von De Crignis Weinhandel</td><td class="has-text-align-right" data-align="right">30 €</td><td class="has-text-align-right" data-align="right"><strong>1433</strong></td></tr></tbody></table></figure>
+            <figure class="wp-block-table">
+              <table class="has-fixed-layout">
+                <thead>
+                  <tr>
+                    <th>Gewinn</th>
+                    <th class="has-text-align-right" data-align="right">Wert</th>
+                    <th class="has-text-align-right" data-align="right">Nummer</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Gutschein von Damenmoden Hein</td>
+                    <td class="has-text-align-right" data-align="right">100 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>0775</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Gutschein von Damenmoden Hein</td>
+                    <td class="has-text-align-right" data-align="right">100 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>0989</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Gutschein von Damenmoden Hein</td>
+                    <td class="has-text-align-right" data-align="right">100 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>1867</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Gutschein von Damenmoden Hein</td>
+                    <td class="has-text-align-right" data-align="right">100 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>0958</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Gutschein von Damenmoden Hein</td>
+                    <td class="has-text-align-right" data-align="right">100 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong><strong>0550</strong></strong></td>
+                  </tr>
+                  <tr>
+                    <td>Goldbarren von Sparkasse Allgäu</td>
+                    <td class="has-text-align-right" data-align="right">350 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong><strong>0893</strong></strong></td>
+                  </tr>
+                  <tr>
+                    <td>Goldbarren von Sparkasse Allgäu</td>
+                    <td class="has-text-align-right" data-align="right">350 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong><strong>2434</strong></strong></td>
+                  </tr>
+                  <tr>
+                    <td>Bargeld von PAUL Bau &amp; Putz GmbH</td>
+                    <td class="has-text-align-right" data-align="right">250 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong><strong>1725</strong></strong></td>
+                  </tr>
+                  <tr>
+                    <td>Bargeld von PAUL Bau &amp; Putz GmbH</td>
+                    <td class="has-text-align-right" data-align="right">250 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>2279</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Gutschein von Pianofactum Musikhaus</td>
+                    <td class="has-text-align-right" data-align="right">200 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>2110</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Gutschein von Pianofactum Musikhaus</td>
+                    <td class="has-text-align-right" data-align="right">200 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>1030</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Gutschein von Pianofactum Musikhaus</td>
+                    <td class="has-text-align-right" data-align="right">200 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>2171</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Geschenkkorb von Wertachtal Werkstätten</td>
+                    <td class="has-text-align-right" data-align="right">50 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>2435</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Geschenkkorb von Wertachtal Werkstätten</td>
+                    <td class="has-text-align-right" data-align="right">50 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>1045</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Geschenkkorb von Wertachtal Werkstätten</td>
+                    <td class="has-text-align-right" data-align="right">50 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>0361</strong></td>
+                  </tr>
+                  <tr>
+                    <td>AK-Schecks von Klemm Wasser + Wärme</td>
+                    <td class="has-text-align-right" data-align="right">100 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>0659</strong></td>
+                  </tr>
+                  <tr>
+                    <td>AK-Schecks von Klemm Wasser + Wärme</td>
+                    <td class="has-text-align-right" data-align="right">100 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>0407</strong></td>
+                  </tr>
+                  <tr>
+                    <td>AK-Schecks von Klemm Wasser + Wärme</td>
+                    <td class="has-text-align-right" data-align="right">100 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>1592</strong></td>
+                  </tr>
+                  <tr>
+                    <td>AK-Schecks von Klemm Wasser + Wärme</td>
+                    <td class="has-text-align-right" data-align="right">100 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>1447</strong></td>
+                  </tr>
+                  <tr>
+                    <td>AK-Schecks von Klemm Wasser + Wärme</td>
+                    <td class="has-text-align-right" data-align="right">100 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>1784</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Fl. Champagner von De Crignis Weinhandel</td>
+                    <td class="has-text-align-right" data-align="right">30 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>1666</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Fl. Champagner von De Crignis Weinhandel</td>
+                    <td class="has-text-align-right" data-align="right">30 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>1060</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Fl. Champagner von De Crignis Weinhandel</td>
+                    <td class="has-text-align-right" data-align="right">30 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>1114</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Fl. Champagner von De Crignis Weinhandel</td>
+                    <td class="has-text-align-right" data-align="right">30 €</td>
+                    <td class="has-text-align-right" data-align="right"><strong>1433</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </figure>
           </div>
         </div>
 
