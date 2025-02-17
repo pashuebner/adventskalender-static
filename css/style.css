@@ -794,10 +794,16 @@ input[type="submit"] {
 
 .checkResult span {
     line-height: 1;
-    padding: .5rem;
     background-color: #0a191d;
     color: white;
-    width: 20px;
+    width: 34px;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     aspect-ratio: 1;
     border-radius: 50%;
     bottom: calc(-10px - .5rem);
