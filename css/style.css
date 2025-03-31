@@ -74,12 +74,15 @@ body {
 
 nav {
     margin: auto;
-    top: calc(clamp(20px, 5svw, 40px) / 2);
-    left: calc(clamp(20px, 5svw, 40px) / 2);
-    width: calc(100svw - clamp(20px, 5svw, 40px));
+    top: 0;
+    left: 0;
+    width: calc(100svw - 2rem);
     height: 60px;
+    padding: 1rem;
+    background-color: #ccab34;
     opacity: 0;
     display: grid;
+    z-index: 99;
     grid-template-columns: 100px 1fr 100px;
     position: fixed;
     max-height: 0px;
@@ -154,6 +157,10 @@ nav a img {
     height: calc(100svh - clamp(20px, 5svw, 40px));
     border-radius: 2rem;
     z-index: 0;
+}
+
+section {
+    padding-top: 3rem !important;
 }
 
 .main .overlay {
@@ -234,21 +241,24 @@ nav a img {
     background: #0a191da6;
 }
 
-.kalender-grid>div:hover {
-    background-color: #0a191d4D;
-    font-size: 60px;
-    transform: scaleX(1) skewx(2deg) skewY(-2deg);
+@media (orientation:landscape) {
+    .kalender-grid>div:hover {
+        background-color: #0a191d4D;
+        font-size: 60px;
+        transform: scaleX(1) skewx(2deg) skewY(-2deg);
+    }
 }
+
 
 .modal {
     border: dashed 1px rgba(255, 255, 255, .4);
-    opacity: 0;
+    display: none;
     z-index: 99;
     margin: 0;
     position: fixed;
-    top: 200%;
+    top: 50%;
     left: 50%;
-    transform: translatex(-50%) translateY(-50%) scaleX(.5);
+    transform: translatex(-50%) translateY(-50%);
     width: calc(100% - 8rem);
     height: calc(100% - 9rem - 60px);
     max-width: 700px;
@@ -263,9 +273,7 @@ nav a img {
 }
 
 .modal.active {
-    opacity: 1;
-    top: 50%;
-    transform: translatex(-50%) translateY(-50%) scaleX(1);
+    display: block;
 }
 
 .modal h2 {
@@ -392,19 +400,17 @@ nav a img {
 
 .intro-content {
     opacity: 0;
-    max-height: 0;
+    max-height: 1000px;
     overflow: hidden;
     animation: introContent 0.75s 2s forwards ease-in-out;
 }
 
 @keyframes introContent {
     0% {
-        max-height: 0;
         opacity: 0;
     }
 
     100% {
-        max-height: 1000px;
         opacity: 1;
     }
 }
@@ -422,16 +428,14 @@ nav a img {
 @keyframes introLogo {
     0% {
         opacity: 0;
-        max-width: 1000px;
-        width: 90%;
-        filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, .8));
+        max-width: 500px;
+        width: 60%;
     }
 
     100% {
         opacity: 1;
         max-width: 300px;
         width: 50%;
-        filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, .4)) drop-shadow(0px 0px 40px rgba(0, 0, 0, .6)) drop-shadow(0px 0px 80px rgba(0, 0, 0, .8)) drop-shadow(0px 0px 120px rgba(0, 0, 0, .8)) drop-shadow(0px 0px 200px rgba(0, 0, 0, 1));
     }
 }
 
@@ -509,15 +513,7 @@ p {
     transition: all .1s linear;
 }
 
-#winnernumber p:not(.active) {
-    display: none;
-    opacity: 0;
-}
-
-#winnernumber p.active {
-    opacity: 1;
-}
-
+/*
 @keyframes introduceDate {
     0% {
         opacity: 0;
@@ -527,7 +523,7 @@ p {
         opacity: 1;
     }
 }
-
+*/
 section {
     min-height: 100svh;
     opacity: 0;
@@ -539,10 +535,7 @@ section {
     width: 100%;
 }
 
-body.scrolled .header-area {
-    opacity: 0;
-    margin-top: -60px;
-}
+
 
 body.scrolled nav {
     opacity: 1;
@@ -553,6 +546,7 @@ body.scrolled section {
     opacity: 1;
 }
 
+/*
 body.scrolled .body-wrapper {
     margin-top: calc((clamp(20px, 5svw, 40px) / 2) + 60px);
     width: calc(100svw - clamp(20px, 5svw, 40px));
@@ -570,7 +564,7 @@ body.scrolled .content {
     top: calc((clamp(20px, 5svw, 40px) / 2) + 60px);
     width: calc(100svw - clamp(20px, 5svw, 40px));
     height: calc(100svh - clamp(20px, 5svw, 40px) - 60px);
-}
+}*/
 
 /*Content*/
 .inner-sec>* {
@@ -748,6 +742,76 @@ table tbody td:nth-child(3) strong {
     width: 33% !important;
 }
 
+.checkNumber {
+    height: 40px;
+    width: 200px;
+    border-radius: .5rem;
+    border: none;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.checkResult p {
+    font-size: 18px !important;
+    line-height: 1 !important;
+}
+
+.checkResult p i {
+    font-size: 14px;
+}
+
+input[type="submit"] {
+    background-color: #C5A326;
+    color: white;
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+    font-size: 20px;
+    font-weight: 900;
+    border: none;
+    cursor: pointer;
+}
+
+.checkResult {
+    position: fixed;
+    padding: .5rem .5rem 24px .5rem;
+    width: 300px;
+    height: inherit;
+    flex-direction: column;
+    background-color: white;
+    color: #0a191d;
+    border-radius: .5rem;
+    margin-top: .5rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkResult h2 {
+    margin: 0 !important;
+    margin-bottom: .5rem !important;
+}
+
+.checkResult span {
+    line-height: 1;
+    background-color: #0a191d;
+    color: white;
+    width: 34px;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    bottom: calc(-10px - .5rem);
+    position: absolute;
+    cursor: pointer;
+    border: solid 1px wheat;
+}
+
 @media (max-width:998px) {
     .burger-wrap {
         display: flex;
@@ -772,8 +836,8 @@ table tbody td:nth-child(3) strong {
     }
 
     .nav-open nav {
-        height: 450px;
-        max-height: 450px !important;
+        height: 250px;
+        max-height: 250px !important;
     }
 
     nav .navspacer {
@@ -787,6 +851,7 @@ table tbody td:nth-child(3) strong {
         margin-bottom: .5rem;
     }
 
+    /*
     body.scrolled.nav-open .body-wrapper {
         margin-top: calc((clamp(20px, 5svw, 40px) / 2) + 250px);
         width: calc(100svw - clamp(20px, 5svw, 40px));
@@ -804,7 +869,7 @@ table tbody td:nth-child(3) strong {
         top: calc((clamp(20px, 5svw, 40px) / 2) + 250px);
         width: calc(100svw - clamp(20px, 5svw, 40px));
         height: calc(100svh - clamp(20px, 5svw, 40px) - 250px);
-    }
+    }*/
 
     .media-text .text {
         width: 250px;
