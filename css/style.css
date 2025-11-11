@@ -62,7 +62,7 @@ body {
     width: calc(100svw - clamp(20px, 5svw, 40px));
     height: calc(100svh - clamp(20px, 5svw, 40px));
     border-radius: 2rem;
-    background-image: url('../assets/bg-advent.jpg');
+    background-image: url('../assets/adventskalender-bild.jpg');
     background-size: cover;
     background-position: center;
     overflow: hidden;
