@@ -704,7 +704,7 @@ a {
     right: 0;
 }
 
-.wp-block-table table {
+table {
     width: 90%;
     margin-left: 5%;
     text-align: left;
@@ -717,16 +717,16 @@ thead {
     border-bottom: solid 1px white;
 }
 
-.wp-block-table table tbody tr {
+table tbody tr {
     border-bottom: dotted 1px rgba(255, 255, 255, .4);
     height: 100px;
 }
 
-.wp-block-table table th:nth-child(2), .wp-block-table table td:nth-child(2) {
+table th:nth-child(2), table td:nth-child(2) {
     text-align: center;
 }
 
-.wp-block-table table th:nth-child(3), .wp-block-table table td:nth-child(3) {
+table th:nth-child(3), table td:nth-child(3) {
     text-align: right;
 }
 
@@ -738,7 +738,7 @@ table tbody td:nth-child(3) strong {
     padding: .5rem 1rem;
 }
 
-.wp-block-table table th, .wp-block-table table td {
+table th, table td {
     width: 33% !important;
 }
 

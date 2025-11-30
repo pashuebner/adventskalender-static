@@ -49,7 +49,7 @@ function checkNumber() {
       if (match) {
         let matchedObj = JSON.parse(match);
         $(".checkResult > div").html(
-          `<h2>Gewonnen!</h2><p><strong>${matchedObj.price}</strong> </br>im Wert von <strong> ${matchedObj.value}</strong></br> <i>Letzte Chance zur Abholung in der Sparkassenpassage in Kaufbeuren am 22.02. zwischen 10 und 13 Uhr</i></p>`
+          `<h2>Gewonnen!</h2><p><strong>${matchedObj.price}</strong> </br>im Wert von <strong> ${matchedObj.value}</strong></br> <i> Der Gewinn kann an vier Samstagen zwischen 10 und 13 Uhr in der Sparkassenpassage von allen Gewinnern abgeholt werden. <br/> 13.12.25, 20.12.25, 10.01.26, 17.01.26</i></p>`
         );
         $(".checkResult").fadeIn("fast").css("display", "flex");
       } else {
@@ -64,6 +64,7 @@ function checkNumber() {
     });
     $(".checkResult > span").click(function () {
       $(".checkResult").fadeOut("fast");
+      $(".checkNumber").val("");
     });
   }
 }
@@ -85,6 +86,8 @@ $(".index").scroll(function (event) {
     $(".overlay").attr("style", "opacity: " + 0 + "!important;");
     $("body").removeClass("scrolled");
   }
+  $(".checkResult").fadeOut("fast");
+  $(".checkNumber").val("");
 });
 $(".content").scroll(function (event) {
   $("body").removeClass("nav-open");
